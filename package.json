@@ -1,0 +1,39 @@
+{
+  "name": "Skorice",
+  "version": "1.0.0",
+  "description": "Skorice is an object structure assertion library.",
+  "main": "./build/lib.js",
+  "scripts": {
+    "release": "standard-version",
+    "prepublish": "npm run build",
+    "build": "webpack",
+    "watch:build": "webpack --watch",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asteridux/skorice.git"
+  },
+  "author": "Antonin Januska <antonin@antjanus.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asteridux/skorice/issues"
+  },
+  "homepage": "https://github.com/asteridux/skorice#readme",
+  "devDependencies": {
+    "babel-core": "6.22.1",
+    "babel-jest": "18.0.0",
+    "babel-loader": "6.2.10",
+    "babel-preset-env": "1.1.8",
+    "jest": "18.1.0",
+    "standard": "8.6.0",
+    "standard-version": "4.0.0",
+    "webpack": "2.2.1"
+  },
+  "jest": {
+    "bail": true,
+    "collectCoverage": true,
+    "verbose": true
+  }
+}
