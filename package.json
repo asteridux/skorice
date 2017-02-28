@@ -22,11 +22,11 @@
   },
   "homepage": "https://github.com/asteridux/skorice#readme",
   "devDependencies": {
-    "babel-core": "6.22.1",
-    "babel-jest": "18.0.0",
-    "babel-loader": "6.2.10",
-    "babel-preset-env": "1.1.8",
-    "jest": "18.1.0",
+    "babel-core": "6.23.1",
+    "babel-jest": "19.0.0",
+    "babel-loader": "6.3.2",
+    "babel-preset-env": "1.1.10",
+    "jest": "19.0.2",
     "standard": "8.6.0",
     "standard-version": "4.0.0",
     "webpack": "2.2.1"
@@ -35,5 +35,9 @@
     "bail": true,
     "collectCoverage": true,
     "verbose": true
+  },
+  "dependencies": {
+    "deep-eql": "2.0.1",
+    "type-detect": "4.0.0"
   }
 }

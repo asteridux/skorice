@@ -1,3 +1,16 @@
-import emptyObj from './src/'
+import { assertDeepEqual } from './src/assertDeepEqual';
+import { assertEqual } from './src/assertEqual';
+import { assertExact } from './src/assertExact';
+import { assertLike } from './src/assertLike';
+import { assertLikeTypes } from './src/assertLikeTypes';
+import { templateLike, templateExact } from './src/templating';
 
-console.log('Object imported', emptyObj)
+export default {
+  assertDeepEqual,
+  assertEqual,
+  assertExact,
+  assertLike,
+  assertLikeTypes,
+  templateLike,
+  templateExact
+};
