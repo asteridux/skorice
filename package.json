@@ -6,8 +6,8 @@
   "scripts": {
     "release": "standard-version",
     "prepublish": "npm run build",
-    "build": "webpack",
-    "watch:build": "webpack --watch",
+    "prebuild": "rimraf build && mkdir build",
+    "build": "rollup --config",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -22,12 +22,15 @@
   },
   "homepage": "https://github.com/asteridux/skorice#readme",
   "devDependencies": {
-    "babel-core": "6.23.1",
+    "babel-core": "6.24.0",
     "babel-jest": "19.0.0",
-    "babel-loader": "6.3.2",
-    "babel-preset-env": "1.1.10",
+    "babel-loader": "6.4.1",
+    "babel-preset-env": "1.2.2",
     "jest": "19.0.2",
-    "standard": "8.6.0",
+    "rimraf": "2.6.1",
+    "rollup": "0.41.6",
+    "rollup-plugin-babel": "2.7.1",
+    "standard": "9.0.1",
     "standard-version": "4.0.0",
     "webpack": "2.2.1"
   },
