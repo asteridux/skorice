@@ -6,13 +6,13 @@ Skorice is an object structure assertion library. The same way you can assert va
 
 ## Installation
 
-```
+```bash
 npm install skorice --save-dev
 ```
 
 and import/require it in your test file to use:
 
-```
+```js
 import skorice from 'skorice';
 ```
 
@@ -24,7 +24,7 @@ Let's say you have an API that you're testing. For integration (or "end to end")
 
 The test asserts that the body is `like` the template, meaning that the body has AT LEAST the keys that template has.
 
-```
+```js
 agent
   .get('/api/tweets')
   .expect(200)
@@ -46,7 +46,7 @@ agent
 
 You can also check for exact structure:
 
-```
+```js
 skorice.assertExact(template, body);
 ```
 
@@ -64,12 +64,8 @@ An "equal" assertion that checks both objects for not only structure but also va
 
 A factory where a template will yield a new function that automatically checks assertions like so:
 
-```
+```js
 var likeTweet = skorice.templateLike({ id: '', body: '', user: '' });
 
 likeTweet(body);
 ```
-
-## Advanced Usage
-
-There are a few 
