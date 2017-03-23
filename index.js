@@ -6,8 +6,6 @@ import { assertLikeTypes } from './src/assertLikeTypes';
 import { templateLike, templateExact } from './src/templating';
 
 export default {
-  assertDeepEqual,
-  assertEqual,
   assertExact,
   assertLike,
   assertLikeTypes,

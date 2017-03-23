@@ -41,6 +41,22 @@ agent
   })
 ```
 
+### assertLikeTypes
+
+Identical to `assertLike`, `assertLikeTypes` allows specifying what type of variable a key should hold in the template like so:
+
+```js
+var template = {
+  name: 'string'
+};
+
+var testObj = {
+  name: 'Antonin Januska',
+  age: 26
+};
+
+assertLikeTypes(template, testObj);
+```
 
 ### assertExact
 
@@ -51,14 +67,6 @@ skorice.assertExact(template, body);
 ```
 
 It'll make sure that whatever you pass in as a template, the body will have no matter how deep either structure is.
-
-### assertEqual
-
-A basic "equal" assertion that lodash and Chai provide.
-
-### assertDeepEqual
-
-An "equal" assertion that checks both objects for not only structure but also values.
 
 ### templating functions
 
