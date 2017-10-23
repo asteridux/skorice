@@ -1,7 +1,7 @@
 import { basicType } from './utils';
 
 export function objectWalker(template, testObj, comparer) {
-  var templateKeys = Object.keys(template);
+  var templateKeys = typeof template === 'string' ? [] : Object.keys(template);
   var error = [];
 
   templateKeys.forEach((key) => {
