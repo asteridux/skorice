@@ -2,11 +2,11 @@ import { assertLike } from '../src/assertLike';
 
 describe('assertLike', () => {
   it('should match simple objects correctly', () => {
-    var template = {
+    const template = {
       name: ''
     };
 
-    var testObj = {
+    const testObj = {
       randomProp: 'random prop',
       otherProp: 'other prop',
       name: 'Test name'
@@ -16,11 +16,11 @@ describe('assertLike', () => {
   });
 
   it('should throw error when there is no match', () => {
-    var template = {
+    const template = {
       name: ''
     };
 
-    var testObj = {
+    const testObj = {
       randomProp: 'random prop',
       otherProp: 'other prop',
       user: {
@@ -34,13 +34,13 @@ describe('assertLike', () => {
   });
 
   it('should match against deeper properties', () => {
-    var template = {
+    const template = {
       user: {
         name: ''
       }
     };
 
-    var testObj = {
+    const testObj = {
       randomProp: 'random prop',
       otherProp: 'other prop',
       user: {
@@ -52,13 +52,13 @@ describe('assertLike', () => {
   });
 
   it('should match against deeper properties', () => {
-    var template = {
+    const template = {
       user: {
         name: ''
       }
     };
 
-    var testObj = {
+    const testObj = {
       randomProp: 'random prop',
       otherProp: 'other prop',
       name: 'Test Name'
@@ -67,6 +67,26 @@ describe('assertLike', () => {
     expect(() => {
       assertLike(template, testObj);
     }).toThrow('Objects do not match at');
+  });
+
+  it('should match with non-empty template', () => {
+    const template = {
+      user: {
+        name: 'very long user name that would normally throw'
+      },
+      randomProp: 'another very long property value',
+      otherProp: 1223345566
+    };
+
+    const testObj = {
+      randomProp: 'random prop',
+      otherProp: 'other prop',
+      user: {
+        name: 'Test Name'
+      }
+    };
+
+    expect(assertLike(template, testObj)).toBeTruthy();
   });
 
 });
